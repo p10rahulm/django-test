@@ -32,8 +32,6 @@ def results(request, question_id):
         raise Http404("Question does not exist")
     return render(request, 'polls/results.html', {'question': question})
 
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
 
 def vote(request, question_id):
     try:
